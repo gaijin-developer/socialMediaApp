@@ -1,10 +1,14 @@
 import {getFontFamily} from '../../assets/fonts/helper';
-
+import {
+  horizontalScale,
+  verticalScale,
+  scaleFontSize,
+} from '../../assets/styles/scaling';
 const {StyleSheet} = require('react-native');
 
 const style = StyleSheet.create({
   userPostContainer: {
-    marginTop: 35,
+    marginTop: verticalScale(35),
     borderBottomWidth: 1,
     paddingBottom: 20,
     borderBottomColor: '#eff2f6',
@@ -13,7 +17,7 @@ const style = StyleSheet.create({
   userTextContainer: {
     flexDirection: 'column',
     justifyContent: 'center',
-    marginLeft: 10,
+    marginLeft: horizontalScale(10),
   },
   userPostTopBar: {
     flexDirection: 'row',
@@ -23,7 +27,7 @@ const style = StyleSheet.create({
   userName: {
     color: '#000',
     fontFamily: getFontFamily('Inter', '500'),
-    fontSize: 16,
+    fontSize: scaleFontSize(16),
   },
   locationStyle: {
     color: '#79869f',
